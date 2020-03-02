@@ -1,0 +1,22 @@
+{
+    "name": "orvisoft/module-cloudburst",
+    "description": "Integration middle-ware for Cloud Burst software.",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "farhan@orvisoft.com",
+            "name": "Farhan Islam"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "OrviSoft\\Cloudburst\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

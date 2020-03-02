@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="cloudburst" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label">
+			<label>Configure Cloud Burst</label>
+			<tab>catalog</tab>
+			<resource>OrviSoft_Cloudburst::config_orvisoft_cloudburst</resource>
+			<group id="options" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label">
+				<label>Settings</label>
+				<field id="is_active" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="select">
+					<label>Status</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+				</field>
+				<field id="burst_secret" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="text">
+					<label>Cloud Burst Secret</label>
+					<comment/>
+					<depends>
+						<field id="cloudburst/options/is_active">1</field>
+					</depends>
+				</field>
+				<field id="callback_url" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="text">
+					<label>Callback URL</label>
+					<comment/>
+					<depends>
+						<field id="cloudburst/options/is_active">1</field>
+					</depends>
+				</field>
+				<field id="error_notification" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="10" translate="label" type="text">
+					<label>Error Notification</label>
+					<comment>Add email to notify when error occur in communicating to callback url.</comment>
+					<depends>
+						<field id="cloudburst/options/is_active">1</field>
+					</depends>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
