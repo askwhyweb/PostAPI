@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+	<event name="sales_order_place_after">
+		<observer instance="OrviSoft\Cloudburst\Observer\Sales\OrderPlaceAfter" name="orvisoft_cloudburst_observer_sales_orderplaceafter_sales_order_place_after"/>
+	</event>
+	<event name="sales_order_save_after">
+		<observer instance="OrviSoft\Cloudburst\Observer\Sales\OrderSaveAfter" name="orvisoft_cloudburst_observer_sales_ordersaveafter_sales_order_save_after"/>
+	</event>
+	<event name="sales_order_payment_pay">
+		<observer instance="OrviSoft\Cloudburst\Observer\Sales\OrderPaymentPay" name="orvisoft_cloudburst_observer_sales_orderpaymentpay_sales_order_payment_pay"/>
+	</event>
+</config>
